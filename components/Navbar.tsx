@@ -9,7 +9,7 @@ const links = [
 
 const Navbar = () => {
   return (
-    <nav className='bg-base-300 py-4 bg-amber-50'>
+    <nav className='py-4 bg-amber-400'>
       <div className='navbar px-8 max-w-6xl mx-auto flex-col sm:flex-row'>
         <Link href='/' className='btn btn-primary'>
           Next.js
