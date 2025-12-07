@@ -1,7 +1,7 @@
-// import type { Metadata } from 'next'
 import { ReactNode } from 'react'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import Navbar from '@/components/Navbar'
 
 // tutaj tworzysz instancję fontu
 const inter = Inter({ subsets: ['latin'] })
@@ -15,10 +15,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang='en'>
       <body className={inter.className}>
-        <nav className='text-2xl text-primary'>navbar</nav>
-        {children}
+        <Navbar />
+        <main className='px-8 py-20 max-w-6xl mx-auto:'>{children}</main>
       </body>
     </html>
   )
 }
-//działa
