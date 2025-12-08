@@ -1,8 +1,18 @@
 const url = 'http://www.thecocktaildb.com/api/json/v1/1/search.php?f=a'
 
-const DrinksPage = async () => {
+const fechDrink = async () => {
+  await new Promise((resolve) => setTimeout(resolve, 1000))
   const response = await fetch(url)
+  //throw error
+  if (!response.ok) {
+    throw new Error('failed to fecht drinks')
+  }
   const data = await response.json()
+  return data
+}
+
+const DrinksPage = async () => {
+  const data = await fechDrink()
   console.log(data)
   return (
     <div>
